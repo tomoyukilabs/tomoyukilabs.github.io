@@ -1,0 +1,33 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	
+	font-size: 16px;
+	font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Segoe UI', Meiryo, 'メイリオ', sans-serif;
+	font-weight: 300;
+	
+	background-color: #003;
+	color: #fff;
+}
+
+body {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+	-webkit-user-select: none;
+}
