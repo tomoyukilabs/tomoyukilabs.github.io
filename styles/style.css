@@ -31,3 +31,135 @@ body {
 	-webkit-text-size-adjust: none;
 	-webkit-user-select: none;
 }
+
+span:not(:lang(en)):not(.always) {
+  display: none;
+}
+
+html:lang(ja) span:lang(ja) {
+  display: inline;
+}
+
+html:lang(ja) span:not(:lang(ja)):not(.always) {
+  display: none;
+}
+
+header {
+  margin: 0;
+  padding: 0.5em;
+  background: #006;
+  text-align: right;
+}
+
+header > h1 {
+  margin: 0 0 0.5em 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  background: 50% 50% / 1.2em 1.2em no-repeat;
+}
+
+.facebook {
+  background-image: url(../images/facebook.png);
+}
+
+.twitter {
+  background-image: url(../images/twitter.png);
+}
+
+.qiita {
+  background-image: url(../images/qiita.png);
+}
+
+article {
+  position: relative;
+  margin: 1em;
+}
+
+section {
+  position: relative;
+  margin-bottom: 1em;
+  padding: 1em 0 0 1em;
+  border-right: 1em solid #fff;
+  background: #fff;
+  color: #003;
+}
+
+section::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0;
+  bottom: -1em;
+  left: 0;
+  border-style: solid;
+  border-width: 1em 1em 0 0;
+  border-color: transparent;
+  border-top-color: #fff;
+  content: "";
+}
+
+section::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: -1em;
+  right: -1em;
+  border-style: solid;
+  border-width: 0 0 1em 1em;
+  border-color: transparent;
+  border-left-color: #8af;
+  content: "";
+}
+
+section > h1 {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-size: 120%;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  header > h1 {
+    font-size: 120%;
+  }
+
+  article {
+    margin: 0.5em;
+  }
+
+  section {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  header > h1 {
+    font-size: 140%;
+  }
+}
+
+@media (min-width: 1025px) {
+  header > h1 {
+    font-size: 150%;
+  }
+
+  article {
+    width: 1024px;
+    left: 0;
+    right: 0;
+    margin: 1em auto;
+  }
+
+  section {
+    margin: 0 1em 1em 1em;
+  }
+}
